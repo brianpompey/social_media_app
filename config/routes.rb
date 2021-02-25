@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'tweets/new'
+  get 'tweets/create'
+  get 'tweets/edit'
+  get 'tweets/update'
+  get 'tweets/destroy'
   root 'homepage#index'
 
   resources :users, only: [:new, :create, :show, :destroy] do
