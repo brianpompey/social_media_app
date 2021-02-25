@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'profile_attrs/new'
+  get 'profile_attrs/create'
+  get 'profile_attrs/edit'
+  get 'profile_attrs/update'
   root 'homepage#index'
 
   resources :users
