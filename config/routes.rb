@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  get 'profile_attrs/new'
-  get 'profile_attrs/create'
-  get 'profile_attrs/edit'
-  get 'profile_attrs/update'
   root 'homepage#index'
 
-  resources :users
+  resources :users, only: [:new, :create, :show, :destroy] do
+    resources :profile_attrs, only: [:new, :edit, :update]
+  end
+  post '/profile_attr', to: 'profile_attrs#create'
   resources :sessions, only: [:new, :create, :destroy]
 
   get '/login', to: 'sessions#new', as: 'login'
