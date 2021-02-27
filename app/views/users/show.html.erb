@@ -2,7 +2,11 @@
 
 <p>
   <strong>Email:</strong>
-  <%= @user.email %>
+  <%= @user.profile_attr.name %>
+  <%= @user.profile_attr.location %>
+  <%= @user.profile_attr.about %>
+  <%= @user.profile_attr.company %>
+  <%= @user.profile_attr.education %>
 </p>
 
 <p>

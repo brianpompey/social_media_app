@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   resources :tweets, only: [:new, :create, :show, :edit, :update, :destroy]
 
   resources :users, only: [:new, :create, :show, :destroy] do
-    resources :profile_attrs, only: [:new, :edit, :update]
+    resources :profile_attrs, only: [:new, :create, :edit, :update]
   end
-  post '/profile_attr', to: 'profile_attrs#create'
+  
   resources :sessions, only: [:new, :create, :destroy]
 
   get '/login', to: 'sessions#new', as: 'login'
