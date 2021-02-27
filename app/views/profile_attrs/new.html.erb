@@ -2,3 +2,41 @@
 <p>Find me in app/views/profile_attrs/new.html.erb</p>
 <h1>Hey <%= @user.username %>!</h1>
 
+<%= form_with model: @profile_attr do |f| %>
+
+    <div class="field">
+    <%= f.label :name, "Name:" %>
+    <br>
+    <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+    <%= f.label :about, "About:" %>
+    <br>
+    <%= f.text_field :about %>
+    </div>
+
+    <div class="field">
+    <%= f.label :location, "Location:" %>
+    <br>
+    <%= f.text_field :location %>
+    </div>
+
+    <div class="field">
+    <%= f.label :company, "Company:" %>
+    <br>
+    <%= f.text_field :company %>
+    </div>
+
+    <div class="field">
+    <%= f.label :education, "Education:" %>
+    <br>
+    <%= f.text_field :education %>
+    </div>
+
+    <div class="field">
+    <%= f.label :image, "Profile Pic:" %>
+    <br>
+    <%= f.file_field :image %>
+    </div>
+<% end %>
