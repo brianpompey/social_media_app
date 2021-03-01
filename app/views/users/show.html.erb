@@ -2,11 +2,12 @@
 
 <p>
   <strong>Email:</strong>
-  <%= @user.profile_attr.name %>
-  <%= @user.profile_attr.location %>
-  <%= @user.profile_attr.about %>
-  <%= @user.profile_attr.company %>
-  <%= @user.profile_attr.education %>
+  <%= @user.profile_attr.name %><br>
+  <%= @user.profile_attr.location %><br>
+  <%= @user.profile_attr.about %><br>
+  <%= @user.profile_attr.company %><br>
+  <%= @user.profile_attr.education %><br>
+  <%= image_tag @user.profile_attr.image %>
 </p>
 
 <p>
@@ -14,5 +15,5 @@
   <%= @user.username %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_profile_attr_path(@user) %> |
 <%= link_to 'Back', users_path %>

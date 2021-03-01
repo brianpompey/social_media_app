@@ -2,7 +2,7 @@
 <p>Find me in app/views/profile_attrs/new.html.erb</p>
 <h1>Hey <%= @user.username %>!</h1>
 
-<%= form_with model: ProfileAttr.new, url: profile_attrs_path do |f| %>
+<%= form_with model: ProfileAttr.new, url: profile_attr_path do |f| %>
 
     <div class="field">
     <%= f.label :name, "Name:" %>
