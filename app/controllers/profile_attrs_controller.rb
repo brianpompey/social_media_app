@@ -24,6 +24,6 @@ class ProfileAttrsController < ApplicationController
   private
 
   def profile_attr_params
-    params.require(:profile_attr).permit(:name, :about, :location, :company, :education, :user_id, :image)
+    params.fetch(:profile_attr).permit(:name, :about, :location, :company, :education, :user_id, :image)
   end
 end
