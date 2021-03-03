@@ -9,6 +9,7 @@ class TweetsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @tweet = Tweet.new
   end
 

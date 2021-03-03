@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   root 'tweets#index'
 
-  resources :tweets, only: [:new, :create, :show, :edit, :update, :destroy]
-
   resources :users, only: [:new, :create, :show, :destroy] do
     resources :profile_attrs, only: [:new, :edit, :update]
+    resources :tweets, only: [:new, :create, :show, :edit, :update, :destroy]
   end
 
   post '/profile_attr', to: 'profile_attrs#create'
