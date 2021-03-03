@@ -1,3 +1,17 @@
 <h1>Tweets#new</h1>
 <p>Find me in app/views/tweets/new.html.erb</p>
 <h2>Hey <%= @user.profile_attr.name %> </h2>
+
+<%= form_with model: Tweet.new, url: tweet_path do |f| %>
+
+    <div class="field">
+    <%= f.label :content, "Tweet:" %>
+    <br>
+    <%= f.text_area :content, size: "70x5" %>
+    <p>280 character max!</p>
+    </div>
+
+    <div class="actions">
+    <%= f.submit class:"btn btn-primary" %>
+    </div>
+<% end %>

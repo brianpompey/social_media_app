@@ -9,4 +9,8 @@
 <h1>Homepage#index</h1>
 
 <h1>WELCOME TO TWITTER</h1>
+
+<% @tweets.each do |tweet| %>
+    <%= tweet.content %>
+<% end %>
 </body>
