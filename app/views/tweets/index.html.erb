@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="text-gray-900 leading-tight">
 <head>
 
 <style>
 
 </style>
 </head>
-<body>
+<body class="min-h-screen bg-gray-100">
 <h1>Homepage#index</h1>
 
 <h1>WELCOME TO TWITTER</h1>
 
-<% @tweets.each do |tweet| %>
-    <%= tweet.content %>
-<% end %>
+<div>
+    <% @tweets.each do |tweet| %>
+        <%= tweet.content %>
+    <% end %>
+</div>
 </body>
